@@ -1,0 +1,40 @@
+<h1>Welcome to homework 3!</h1>
+<p>This week, I learned about how to display records from my database.</p>
+<p> Users:
+<br>
+<% for user in @users %>
+<% empty = " " %>
+<%= "#{user.name}#{empty}#{user.email}#{empty}#{user.age}" %>
+<br>
+<% end %>
+<p>
+
+<p> Cats:
+<br>
+<% for cat in @cats %>
+<%= "#{cat.name}" %>
+<br>
+<% end %>
+<p>
+
+<p> Finished:
+<br>
+<% for todo in @todos %>
+<% empty = " " %>
+<% if (todo.finished == true) %>
+<%= "#{todo.task}" %>
+<br>
+<% end %>
+<% end %>
+<p>
+
+<p> Unfinished:
+<br>
+<% for todo in @todos %>
+<% empty = " " %>
+<% if (todo.finished == false) %>
+<%= "#{todo.task}" %>
+<br>
+<% end %>
+<% end %>
+<p>
